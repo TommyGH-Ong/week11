@@ -52,9 +52,11 @@
 //     resultPara.textContent = `The area of a circle with radius ${enteredValue} is ${result}`
 // }
 
+const ulElement = document.querySelector(".shopping")
+
 function populateList(myShoppingList){
     //get access to the ul element
-    const ulElement = document.querySelector(".shopping")
+
     // console.log(ulElement)
 
     //loop through myShoppingList array
@@ -68,9 +70,16 @@ function populateList(myShoppingList){
         ulElement.appendChild(newLi)
     } 
     //add an li under the ul element with text equal to each item of myShoppingList
- 
-
 }
 
 let shoppingList = ['bread', 'cheese', 'green pepper'];
 populateList(shoppingList)
+
+function squareList(){
+    //get access to the ul
+    //remove circleList class
+    ulElement.classList.remove('circleList')
+    //add squareList class
+    ulElement.classList.add('squareList')
+}
+squareList()
